@@ -22,14 +22,7 @@
         y2 = Convert.ToDouble(Console.ReadLine());
 
         //Proceso cálculo de la variable "d";
-
-        double x = (x2 - x1) * (x2 - x1);
-        double y = (y2 - y1) * (y2 - y1);
-
-        double suma = x + y;
-
-        //La clase math tiene muchos métodos, entre ellos el método Sqrt, este señor recibe un parámetro dentro de sus (), ese parametro es el numero que yo le mando al método para que me saque la raíz cuadrada.
-        d = Math.Sqrt(suma);
+        d = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
 
         //Formas de concatenación. Se recomiendan la segunda y la tercera, la primera hace mas lenta la concatenación.
 
