@@ -6,7 +6,6 @@
 
         double seg1, seg2, seg3;
         bool istriangle;
-        string msj;
 
         //Pedir los datos:
 
@@ -32,10 +31,12 @@
 
         //Mostrar mensaje output
         if (!istriangle)
-        { 
-            Console.Write("No se puede construir el triangulo"); 
+        {
+            Console.Write("No se puede construir el triangulo");
         }
-        else 
-        { 
-            Console.Write("Se puede construir el triángulo"); 
+        else
+        {
+            Console.Write("Se puede construir el triángulo");
         }
+    }
+}
