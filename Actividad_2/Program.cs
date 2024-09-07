@@ -20,7 +20,7 @@
 
         //Proceso de v
         //Validación en una sola línea
-        if (((seg1 + seg2) > seg3) && ((seg1 + seg3) > seg2) && ((seg2 + seg3) > seg1))
+        if ((seg1 + seg2) > seg3)
         {
             istriangle = true;
         }
