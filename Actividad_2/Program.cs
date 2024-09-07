@@ -19,15 +19,23 @@
         Console.Write("Ingrese el tercer segmento: ");
         seg3 = Convert.ToDouble(Console.ReadLine());
 
-        //Proceso de validación
-
-        if ((seg1 + seg2) > seg3)
+        //Proceso de v
+        //Validación en una sola línea
+        if (((seg1 + seg2) > seg3) && ((seg1 + seg3) > seg2) && ((seg2 + seg3) > seg1))
         {
-            if ((seg1 + seg3) > seg2)
-            {
-                if ((seg2 + seg3) > seg1)
-                {
-                    istriangle = true;
-                }
-            }
+            istriangle = true;
+        }
+        else
+        {
+            istriangle = false;
+        }
+
+        //Mostrar mensaje output
+        if (!istriangle)
+        { 
+            Console.Write("No se puede construir el triangulo"); 
+        }
+        else 
+        { 
+            Console.Write("Se puede construir el triángulo"); 
         }
