@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Numerics;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -16,7 +18,28 @@
 
         double Subtotal = kgManz * Convert.ToDouble(PrecioKgManz);
 
-        Console.WriteLine($"El precio a pagar es $ {Subtotal}");
+        if (kgManz >= 0 && kgManz <= 2)
+        {
+            descuento = Subtotal - Subtotal;
+        }
+        else if (kgManz > 2 && kgManz <= 5)
+        {
+            descuento = Subtotal * 0.1;
+        }
+        else if(kgManz > 5 && kgManz <= 10)
+        {
+            descuento = Subtotal * 0.15;
+        }
+        else
+        {
+            descuento = Subtotal * 0.2;
+        }
+
+        double Total = Subtotal - descuento;
+
+        Console.WriteLine($"Subtotal $ {Subtotal}");
+        Console.WriteLine($"Subtotal $ {descuento}");
+        Console.WriteLine($"Subtotal $ {Total}");
 
     }
 }
