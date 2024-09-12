@@ -16,6 +16,7 @@
 
         double Subtotal = kgManz * Convert.ToDouble(PrecioKgManz);
 
+        Console.WriteLine($"El precio a pagar es $ {Subtotal}");
 
     }
 }
