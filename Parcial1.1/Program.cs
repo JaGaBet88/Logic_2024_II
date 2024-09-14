@@ -14,19 +14,41 @@
 
         //Mostrar un mensaje donde indique si ganó o no el beneficio.
 
-        const decimal sb = 2000000; // sb: Sueldo base
+        const double sb = 2000000; // sb: Sueldo base
         const double porc = 0.1; // porc: Porcentaje de comision por venta.
-        double venta1,venta2,venta3,comi1,comi2,comi3;
+        double venta1, venta2, venta3, comi1, comi2, comi3, sumacomisiones,SueldoNetoMes;
+        int VentaMayor;
 
         Console.Write("Ingrese el valor de la venta #1: ");
         venta1 = Convert.ToDouble(Console.ReadLine());
-            comi1 = venta1 * porc;
+        comi1 = venta1 * porc;
 
         Console.Write("Ingrese el valor de la venta #2: ");
         venta2 = Convert.ToDouble(Console.ReadLine());
-        
+        comi2 = venta2 * porc;
+
         Console.Write("Ingrese el valor de la venta #3: ");
         venta3 = Convert.ToDouble(Console.ReadLine());
+        comi3 = venta3 * porc;
+
+        sumacomisiones = comi1 + comi2 + comi3; 
+        SueldoNetoMes = sb + sumacomisiones;
+
+        if (venta1 > venta2 && venta1 > venta3)
+        {
+            VentaMayor = Convert.ToInt32(venta1);
+        }
+        else if (venta2 > venta1 && venta2 > venta3)
+        {
+            VentaMayor = Convert.ToInt32(venta2);
+        }
+        else
+        {
+            VentaMayor = Convert.ToInt32(venta3);
+        }
+
+
+
 
 
 
