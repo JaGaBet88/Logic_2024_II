@@ -33,17 +33,17 @@
         if (comi1 > comi2 && comi1 > comi3)
         {
             VentaMayor = Convert.ToInt32(venta1);
-            Console.WriteLine($"La venta por valor de {venta1:C0}, generó la mayor comisión del mes.");
+            Console.WriteLine($"La venta por valor de {venta1:C0}, generó la mayor comisión del mes. El total de la comision fue por valor de {comi1:C0}");
         }
         else if (comi2 > comi1 && comi2 > comi3)
         {
             VentaMayor = Convert.ToInt32(venta2);
-            Console.WriteLine($"La venta por valor de {venta2:C0}, generó la mayor comisión del mes.");
+            Console.WriteLine($"La venta por valor de {venta2:C0}, generó la mayor comisión del mes. El total de la comision fue por valor de {comi2:C0}");
         }
         else
         {
             VentaMayor = Convert.ToInt32(venta3);
-            Console.WriteLine($"La venta por valor de {venta3:C0}, generó la mayor comisión del mes.");
+            Console.WriteLine($"La venta por valor de {venta3:C0}, generó la mayor comisión del mes. El total de la comision fue por valor de {comi3:C0}");
         }
 
         //¿Cuál fue el promedio de las comisiones que recibió por cada venta?
@@ -67,11 +67,5 @@
             TotalPago = SueldoNetoMes;
             Console.Write($"¡Ups! no cumpliste con la meta mensual de ventas este mes, no ganaste el beneficio. Haz recibido un pago total de {TotalPago:C0}");
         }
-
-
-
-
-
-
     }
 }
