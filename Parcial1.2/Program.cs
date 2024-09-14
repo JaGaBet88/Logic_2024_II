@@ -16,6 +16,20 @@ internal class Program
         Console.Write("Ingrese el valor de 'b' (constante): ");
         b = Convert.ToDouble(Console.ReadLine());
 
+        //Condicional para evaluar los casos de la ecuación
+        if(a == 0 && b == 0)
+        {
+            Console.WriteLine("Todos los números son solución de la ecuación");
+        }
+        else if(a == 0)
+        {
+            Console.WriteLine("La ecuación no tiene solución. ");
+        }
+        else
+        {
+            solucion = -b / a;
+            Console.WriteLine($"La solución de la ecuación es: x = {solucion}");
+        }
 
     }
 }
