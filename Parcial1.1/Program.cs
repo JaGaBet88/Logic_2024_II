@@ -14,6 +14,23 @@
 
         //Mostrar un mensaje donde indique si ganó o no el beneficio.
 
-        const decimal sb ;
+        const decimal sb = 2000000; // sb: Sueldo base
+        const double porc = 0.1; // porc: Porcentaje de comision por venta.
+        double venta1,venta2,venta3,comi1,comi2,comi3;
+
+        Console.Write("Ingrese el valor de la venta #1: ");
+        venta1 = Convert.ToDouble(Console.ReadLine());
+            comi1 = venta1 * porc;
+
+        Console.Write("Ingrese el valor de la venta #2: ");
+        venta2 = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Ingrese el valor de la venta #3: ");
+        venta3 = Convert.ToDouble(Console.ReadLine());
+
+
+
+
+
     }
 }
