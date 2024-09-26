@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Reflection;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -8,7 +10,7 @@
         int contador = 0, N_Num;
         bool flag = true;
 
-        //Proceso
+        //Proceso con ciclo while
         while (flag)
         {
             Console.Write("Ingrese un número: ");
@@ -24,9 +26,9 @@
             {
                 flag = false;
             }
-
-        
         }
+        Console.WriteLine($"El total de números positivos ingresados es : {contador}");
 
+        //Por lo general el while se usa con banderas ya que no hay un iterador que limite la cantidad de veces que se repetirá el ciclo.
     }
 }
