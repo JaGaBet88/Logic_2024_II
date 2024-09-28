@@ -10,8 +10,10 @@
         Console.Write("Ingrese el primero número: ");
         num1 = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Ingrese el segundo número: ");
+        Console.Write("\n Ingrese el segundo número: ");
         num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(); 
 
         //Se aplica un condicional para determinar cual es el numero menor y el mayor ingresados por pantalla
         if (num1 < num2)
@@ -29,5 +31,7 @@
         {
             Console.Write($"{i} ");
         }
+
+        Console.WriteLine("\n");
     }
 }
