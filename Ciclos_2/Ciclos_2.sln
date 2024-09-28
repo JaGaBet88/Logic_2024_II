@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ciclos_2", "Ciclos_2.csproj", "{6F973E01-ACED-4999-8C90-DEA51A247772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F973E01-ACED-4999-8C90-DEA51A247772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F973E01-ACED-4999-8C90-DEA51A247772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F973E01-ACED-4999-8C90-DEA51A247772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F973E01-ACED-4999-8C90-DEA51A247772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F296B2C6-0578-472D-9D37-BC74024325DF}
+	EndGlobalSection
+EndGlobal
