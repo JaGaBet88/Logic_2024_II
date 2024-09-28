@@ -13,6 +13,7 @@
         Console.Write("Ingrese el segundo número: ");
         num2 = Convert.ToInt32(Console.ReadLine());
 
+        //Se aplica un condicional para determinar cual es el numero menor y el mayor ingresados por pantalla
         if (num1 < num2)
         {
             menor = num1;
