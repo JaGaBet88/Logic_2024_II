@@ -7,18 +7,13 @@
         //Variables
         double num1, num2;
         int opcion;
-        double resultado = 0;
+        double resultado;
         bool continuar = true;
+        string salir;
 
         do
         {
-            Console.Write("Ingresar el primer número: ");
-            num1 = double.Parse(Console.ReadLine()); //Double parse es exactamente lo mismo que el convert.ToDouble
-            //Realizo toda la lógica del código
-
-            Console.Write("Ingresar el segundo número: ");
-            num2 = double.Parse(Console.ReadLine());
-
+            Console.Clear();//Me borra toda la pantalla de la consola
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("---Seleccione una operación aritmetica---");
             Console.WriteLine("---1. Sumar                           ---");
@@ -31,40 +26,68 @@
 
             opcion = int.Parse(Console.ReadLine());
 
-            switch (opcion)
+            if (opcion != 0)
             {
-                case 1:
-                    //Aqui ingresamos la lógica para implementar el caso 1 y después colocamos la palabra "break"//
-                    resultado = num1 + num2;
-                    Console.WriteLine($"Suma: {num1} + {num2} = {resultado}");
-                    break;
+                Console.Write("\nIngresar el primer número: ");
+                num1 = double.Parse(Console.ReadLine()); //Double parse es exactamente lo mismo que el convert.ToDouble
+                                                         //Realizo toda la lógica del código
 
-                case 2:
-                    resultado = num1 - num2;
-                    Console.WriteLine($"Resta: {num1} - {num2} = {resultado}");
-                    break;
+                Console.Write("\nIngresar el segundo número: ");
+                num2 = double.Parse(Console.ReadLine());
 
-                case 3:
-                    resultado = num1 * num2;
-                    Console.WriteLine($"Multiplicación: {num1} x {num2} = {resultado}");
-                    break;
+                switch (opcion)
+                {
+                    case 0:
+                        Console.WriteLine("\nTe has salido del programa. Adios!");
+                        continuar = false;
+                        break;
+                    case 1:
+                        //Aqui ingresamos la lógica para implementar el caso 1 y después colocamos la palabra "break"//
+                        resultado = num1 + num2;
+                        Console.WriteLine($"\nSuma: {num1} + {num2} = {resultado}");
+                        break;
 
-                case 4:
-                    if (num2 != 0)
-                    {
-                        resultado = num1 / num2;
-                        Console.WriteLine($"División: {num1} / {num2} = {resultado}");
-                    }
-                    else
-                    { 
-                        Console.WriteLine("Error: No se puede dividir por cero");
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Opción no válida");
-                    break;
+                    case 2:
+                        resultado = num1 - num2;
+                        Console.WriteLine($"\nResta: {num1} - {num2} = {resultado}");
+                        break;
+
+                    case 3:
+                        resultado = num1 * num2;
+                        Console.WriteLine($"\nMultiplicación: {num1} x {num2} = {resultado}");
+                        break;
+
+                    case 4:
+                        if (num2 != 0)
+                        {
+                            resultado = num1 / num2;
+                            Console.WriteLine($"\nDivisión: {num1} / {num2} = {resultado}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nError: No se puede dividir por cero");
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("\nOpción no válida");
+                        break;
+                }
             }
-        
+
+            if (continuar) 
+            {
+                Console.WriteLine("\n¿Deseas realizar otra operación? (S/N)");
+                salir = Console.ReadLine().ToUpper();
+
+                //Métodos para poner un string 
+
+                if(salir == "N")
+                {
+                    Console.WriteLine("\nTe has salido del programa! Adios. ");
+                    continuar = false;
+                }
+            }
+
         }
         while (continuar);
     }
