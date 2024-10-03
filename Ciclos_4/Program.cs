@@ -35,7 +35,7 @@
 
                 //Cálculo del IMC
 
-                imc = peso / Math.Pow(2, estatura); //Esto es lo mismo que poner (estatura * estatura)
+                imc = peso / Math.Pow(estatura,2); //Esto es lo mismo que poner (estatura * estatura)
 
                 switch (imc) //imc= 27
                 {
