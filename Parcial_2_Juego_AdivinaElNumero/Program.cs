@@ -35,15 +35,45 @@
             //Validación para el número de jugadores
             while (Jugadores < 2 || Jugadores > 4)
             {
-                if (Jugadores < 2 || Jugadores > 4)
+                if (int.TryParse(Console.ReadLine(), out Jugadores))
                 {
-                    Console.WriteLine("El número de jugadores debe ser entre 2 y 4");
+                    if (Jugadores < 2 || Jugadores > 4)
+                    {
+                        Console.WriteLine("El número de jugadores debe ser entre 2 y 4");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
-                }
+                
             }
+
+            //Definir el rango según la cantidad de jugadores
+
+            int RangoMaximo = 0;
+
+            switch (Jugadores)
+            {
+                case 2:
+                    RangoMaximo = 50;
+                    break;
+                case 3:
+                    RangoMaximo = 100;
+                    break;
+                case 4:
+                    RangoMaximo = 200;
+                    break;
+            }
+
+            //Generar un número aleatorio
+            Random random = new Random();
+            int NumeroAleat = random.Next(0,RangoMaximo + 1);
+
+            bool numeroAdivinado = false;
+            int JugadorAct = 1;
+
+
 
         }
     }
