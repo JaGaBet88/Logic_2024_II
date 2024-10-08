@@ -73,8 +73,48 @@
             bool numeroAdivinado = false;
             int JugadorAct = 1;
 
+            //Ciclo principal del juego
+            while (!numeroAdivinado)
+            {
+                Console.WriteLine($"Jugador {JugadorAct}, es tu turno. Ingresa un número entre 0 y {RangoMaximo}: ");
+                int NumeroIngresado = 0;
 
+                //Validación del número ingresado
+                while (!int.TryParse(Console.ReadLine(),out NumeroIngresado) || NumeroIngresado < 0 || NumeroIngresado > RangoMaximo)
+                {
+                    Console.WriteLine($"Entrada inválida. Debes ingresar un número entre 0 y {RangoMaximo}. Inténtalo de nuevo: ");
+                }
 
+                //Comparación del número ingresado con el número aleatorio
+                if(NumeroIngresado < NumeroAleat)
+                {
+                    Console.WriteLine("MAYOR");
+                }
+                else if (NumeroIngresado > NumeroAleat) 
+                {
+                    Console.WriteLine("MENOR");
+                }
+                else
+                {
+                    Console.WriteLine($"¡Has ganado, jugador # {JugadorAct}!");
+                    numeroAdivinado = true;
+                }
+
+                //Cambiar de jugador si no ha ganado
+                if (!numeroAdivinado)
+                {
+                    JugadorAct = (JugadorAct % Jugadores) + 1; //Rotación entre jugadores
+                }
+
+            }
+
+            //Preguntar si desean volver a jugar
+            Console.WriteLine("¿Jugar de nuevo? (S/N)");
+            string respuesta = Console.ReadLine().ToUpper();
+
+            JugarDeNuevo = respuesta == "s";
         }
+
+        Console.WriteLine("Gracias por jugar. ¡Hasta la próxima!");
     }
 }
