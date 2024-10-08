@@ -68,7 +68,6 @@
             }
 
             //Mostrar los resultados finales
-            Console.WriteLine($"\nResultados del grupo:");
             Console.WriteLine($"Estudiantes que ganaron: {estudiantesGanaron}");
             Console.WriteLine($"Estudiantes que perdieron: {estudiantesPerdieron}");
 
