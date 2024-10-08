@@ -41,10 +41,10 @@
                     {
                         Console.WriteLine("El número de jugadores debe ser entre 2 y 4");
                     }
-                    else
-                    {
-                        Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
-                    }
+                else
+                {
+                    Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
+                }
                 }
                 
             }
@@ -112,7 +112,7 @@
             Console.WriteLine("¿Jugar de nuevo? (S/N)");
             string respuesta = Console.ReadLine().ToUpper();
 
-            JugarDeNuevo = respuesta == "s";
+            JugarDeNuevo = respuesta == "S";
         }
 
         Console.WriteLine("Gracias por jugar. ¡Hasta la próxima!");
