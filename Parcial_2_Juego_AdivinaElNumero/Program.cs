@@ -13,7 +13,7 @@
         - Si participan 3 jugadores, el número N aleatorio se generará entre 0 y 100
         - Si participan 4 jugadores, el número N aleatorio se generará entre 0 y 200
 
-        Cada jugador comenzará su turno intentando adivinar ese número ℕ aleatorio. El programa deberá mostrarle al jugador la siguiente información:
+        Cada jugador comenzará su turno intentando adivinar ese número N aleatorio. El programa deberá mostrarle al jugador la siguiente información:
 
         - Si el número ingresado es mayor al número aleatorio, entonces mostrar por pantalla la palabra “MENOR” y darle la oportunidad al siguiente jugador.
         - Si el número ingresado es menor al número aleatorio, entonces mostrar por pantalla la palabra “MAYOR” y darle la oportunidad al siguiente jugador.
@@ -41,11 +41,12 @@
                     {
                         Console.WriteLine("El número de jugadores debe ser entre 2 y 4");
                     }
+                }
                 else
                 {
                     Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
                 }
-                }
+                
                 
             }
 
@@ -109,7 +110,7 @@
             }
 
             //Preguntar si desean volver a jugar
-            Console.WriteLine("¿Jugar de nuevo? (S/N)");
+            Console.WriteLine("¿Jugar de nuevo? (s/n)");
             string respuesta = Console.ReadLine().ToUpper();
 
             JugarDeNuevo = respuesta == "S";
