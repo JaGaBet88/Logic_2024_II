@@ -72,6 +72,12 @@
             Console.WriteLine($"Estudiantes que ganaron: {estudiantesGanaron}");
             Console.WriteLine($"Estudiantes que perdieron: {estudiantesPerdieron}");
 
+            //Preguntar si se desea evaluar otro grupo de estudiantes
+            Console.WriteLine("\n¿Desea ingresar otro grupo de estudiantes? (s/n): ");
+            string respuesta = Console.ReadLine().ToUpper();
+            nuevoGrupo = respuesta == "S";
         }
+
+        Console.WriteLine("Gracias por usar el sistema de evaluación. ¡Hasta la próxima!");
     }
 }
