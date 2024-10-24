@@ -25,6 +25,9 @@ internal class Program
             persona.Nombre = nombre;
             persona.Edad = edad;
 
+            persona.Presentar();
+            persona.EsMayorDeEdad();
+
         }
     }
 }
