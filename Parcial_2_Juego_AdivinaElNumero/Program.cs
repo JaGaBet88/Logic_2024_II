@@ -46,8 +46,6 @@
                 {
                     Console.WriteLine("Entrada inválida. Por favor ingrese un número entre 2 y 4.");
                 }
-                
-                
             }
 
             //Definir el rango según la cantidad de jugadores
