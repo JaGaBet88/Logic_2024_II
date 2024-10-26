@@ -33,7 +33,6 @@ namespace Ejercicio_37_POO
             {
                 Console.WriteLine("Soy menor de edad");
             }
-
         }
     }
 }
