@@ -22,5 +22,24 @@ namespace Actividad_Evaluativa_0._1
             CostoCredito = costoCredito;
         }
 
+        //Método para calcular el costo de la matricula
+        public decimal CalcularCostoMatricula()
+        {
+            decimal costoTotal;
+
+            if (Creditos <= 20)
+            {
+                //Si toma 20 créditos, se calcula con el costo normal por crédito
+                costoTotal = Creditos * CostoCredito;
+            }
+            else
+            {
+                //Si toma mas de 20 créditos, los créditos adicionales se pagan al doble
+                int CreditosExtra = Creditos - 20;
+                costoTotal = (20 * CostoCredito) + (CreditosExtra * CostoCredito * 2);
+            }
+
+            //Resta el descuento correspondiente basado en el estrato
+
     }
 }
