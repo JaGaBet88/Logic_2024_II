@@ -9,7 +9,9 @@ internal class Program
  
 - Si toma 20 o menos créditos, paga el crédito al valor normal.
 - Si toma por encima de 20 créditos, se pagarán los créditos extras al doble de valor normal.
-- Si el estudiante es de estrato 1, 2 o 3 recibe los siguientes descuentos:
+
+Si el estudiante es de estrato 1, 2 o 3 recibe los siguientes descuentos:
+
 - Si el estrato es 1, el descuento es del 80%.
 - Si el estrato es 2, el descuento es del 50%.
 - Si el estrato es 3, el descuento es del 30%.

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,19 @@ namespace Actividad_Evaluativa_0._1
             }
 
             //Resta el descuento correspondiente basado en el estrato
+            return costoTotal - CalcularDescuento(costoTotal);
+
+            //Método para calcular el descuento basado en el estrato
+            private decimal CalcularDescuento(decimal costo)
+            {
+                decimal descuento = 0;
+
+            switch(Estrato) 
+            {
+                case 1:
+
+
+            }
 
     }
 }
