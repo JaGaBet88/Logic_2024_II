@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System;
+using Actividad_Evaluativa_0._1;
 
 internal class Program
 {
@@ -28,6 +29,8 @@ La aplicación debe preguntar al usuario si quiere volver al inicio o no para ca
 Hacer uso de todos los elementos de programación que hemos visto hasta el momento, incluyendo POO (clases, propiedades, métodos). */
     private static void Main(string[] args)
     {
-
+        // Inicia la aplicación
+        Aplicacion app = new Aplicacion();
+        app.Iniciar();
     }
 }
