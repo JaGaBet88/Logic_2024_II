@@ -60,7 +60,8 @@ namespace Actividad_Evaluativa_0._1
                     descuento = costo * 0.30m; // Descuento del 30% para estrato 3
                     break;
                 default:
-                    Console.WriteLine("Opcion no válida")
+                    Console.WriteLine("Opcion no válida");
+                    break;
             }
 
             return descuento;
