@@ -15,8 +15,22 @@ namespace Actividad_Evaluativa_0._1
 
             while (continuar)
             {
-                Console.WriteLine("Ingrese el estrato del estudiante (1, 2 o 3): ");
-                int estrato = int.Parse(Console.ReadLine());
+                int estrato;
+
+                // Ciclo de validación para el estrato
+                while (true)
+                {
+                    Console.WriteLine("Ingrese el estrato del estudiante (1, 2 o 3): ");
+                    if (int.TryParse(Console.ReadLine(), out estrato) && (estrato == 1 || estrato == 2 || estrato == 3))
+                    {
+                        // Estrato válido ingresado
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Valor de estrato inválido. Ingrese 1, 2 o 3.");
+                    }
+                }
 
                 Console.WriteLine("Ingrese la cantidad de créditos que tomará el estudiante: ");
                 int creditos = int.Parse(Console.ReadLine());

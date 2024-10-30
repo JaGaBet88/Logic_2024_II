@@ -48,21 +48,18 @@ namespace Actividad_Evaluativa_0._1
         {
             decimal descuento = 0;
 
-            switch (Estrato)
-            {
-                case 1:
-                    descuento = costo * 0.80m; // Descuento del 80% para estrato 1
-                    break;
-                case 2:
-                    descuento = costo * 0.50m; // Descuento del 50% para estrato 2
-                    break;
-                case 3:
-                    descuento = costo * 0.30m; // Descuento del 30% para estrato 3
-                    break;
-                default:
-                    Console.WriteLine("Opcion no válida");
-                    break;
-            }
+                switch (Estrato)
+                {
+                    case 1:
+                        descuento = costo * 0.80m; // Descuento del 80% para estrato 1
+                        break;
+                    case 2:
+                        descuento = costo * 0.50m; // Descuento del 50% para estrato 2
+                        break;
+                    case 3:
+                        descuento = costo * 0.30m; // Descuento del 30% para estrato 3
+                        break;
+                }
 
             return descuento;
         }
