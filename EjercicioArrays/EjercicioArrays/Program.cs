@@ -24,7 +24,7 @@ internal class Program
 
         //Método calcular ventas total del año.
 
-        CalcularVentas(ventas, suma);
+        suma = CalcularVentas(ventas, suma);
 
         //Método para mostrar ventas.
         MostrarVentas(ventas, meses, suma);
@@ -36,16 +36,18 @@ internal class Program
         for (int i = 0; i < ventas.Length; i++) 
         {
             Console.WriteLine($"Ingrese las ventas del mes {meses[i]}");
-            ventas[i] = Convert.ToDecimal(Console.ReadLine);
+            ventas[i] = Convert.ToDecimal(Console.ReadLine());
         }
 
     }
-    private static void CalcularVentas(decimal[] ventas, decimal suma)
+    private static decimal CalcularVentas(decimal[] ventas, decimal suma)
     {
         for(int i = 0;i < ventas.Length; i++)
         {
             suma += ventas[i];
         }
+
+        return suma;
     }
     private static void MostrarVentas(decimal[] ventas, string[] meses, decimal suma)
     {
