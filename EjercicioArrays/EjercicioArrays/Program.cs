@@ -24,7 +24,7 @@ internal class Program
 
         //Método calcular ventas total del año.
 
-        CalcularVentas();
+        CalcularVentas(ventas, suma);
 
         //Método para mostrar ventas.
         MostrarVentas();
@@ -40,9 +40,12 @@ internal class Program
         }
 
     }
-    private static void CalcularVentas()
+    private static void CalcularVentas(decimal[] ventas, decimal suma)
     {
-
+        for(int i = 0;i < ventas.Length; i++)
+        {
+            suma += ventas[i];
+        }
     }
     private static void MostrarVentas()
     {
