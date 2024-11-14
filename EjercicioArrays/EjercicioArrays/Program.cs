@@ -33,6 +33,11 @@ internal class Program
 
     private static void CapturarVentas(string[] meses, decimal[] ventas)
     {
+        for (int i = 0; i < ventas.Length; i++) 
+        {
+            Console.WriteLine($"Ingrese las ventas del mes {meses[i]}");
+            ventas[i] = Convert.ToDecimal(Console.ReadLine);
+        }
 
     }
     private static void CalcularVentas()
