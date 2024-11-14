@@ -27,7 +27,7 @@ internal class Program
         CalcularVentas(ventas, suma);
 
         //Método para mostrar ventas.
-        MostrarVentas();
+        MostrarVentas(ventas, meses, suma);
 
     }
 
@@ -47,9 +47,14 @@ internal class Program
             suma += ventas[i];
         }
     }
-    private static void MostrarVentas()
+    private static void MostrarVentas(decimal[] ventas, string[] meses, decimal suma)
     {
+        for (int i = 0; i < ventas.Length; i++)
+        {
+            Console.WriteLine($"{meses[i]}:{ventas[i]:C2}");
+        }
 
+        Console.WriteLine($"Total = {suma:C2}");
     }
 
 
